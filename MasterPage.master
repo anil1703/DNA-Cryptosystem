@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Ignition
+Description: A three-column, fixed-width blog design.
+Version    : 1.0
+Released   : 20091018
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head  runat="server">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>DNA Cryptosystem</title>
+ <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<meta name="keywords" content="" />
+<meta name="Ignition" content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div id="wrapper">
+  <!-- start header -->
+  <div id="header-wrapper">
+    <div id="header">
+      <div id="logo">
+        <h1><a href="#"><span style ="text-align :left ; font-size :35px ;  text-transform :capitalize ;  padding-left :350px;">DNA CRYPTOSYSTEM</span> <br /><span style ="text-align :center ; font-size :35px ;  text-transform :capitalize ; padding-left :230px;"> </span> </a></h1>
+        <br />
+        
+      </div> 
+    </div>
+  </div>
+  <div id="menu-wrapper">
+  <table border="0"  >
+  <tr><td><br /></td></tr>
+    <tr><td style ="padding-left :300px;">
+    
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+            StaticEnableDefaultPopOutImage="False" Font-Size="Medium" 
+            ForeColor="#FFFF66" Visible="False">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Homepage" Value="Homepage">
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/AdminLogin.aspx" Text="Admin Login" 
+                    Value="Admin Login"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Login.aspx" Text="User Login" Value="User Login">
+                </asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="100px" />
+        </asp:Menu>
+    
+    </td></tr>
+    <tr><td style ="padding-left :300px;">
+    
+        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" 
+            StaticEnableDefaultPopOutImage="False" Visible="False" Font-Size="Medium" 
+            ForeColor="#FFFF66">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/AdminViewUserDetails.aspx" 
+                    Text="View User Details" Value="View User Details"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/AdminViewSendMessage.aspx" 
+                    Text="View Message Details" Value="View Message Details"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Logout" Value="Logout">
+                </asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="100px" />
+        </asp:Menu>
+    
+    </td></tr>
+    <tr><td style ="padding-left :300px;">
+    
+        <asp:Menu ID="Menu3" runat="server" Orientation="Horizontal" 
+            StaticEnableDefaultPopOutImage="False" Font-Size="Medium" Visible="False" 
+            ForeColor="#FFFF66">
+            <DynamicMenuItemStyle HorizontalPadding="100px" />
+            <Items>
+                <asp:MenuItem Text="Send Message" 
+                    Value="Send Message">
+                    <asp:MenuItem NavigateUrl="~/SendMessage1.aspx" Text="Send Message" 
+                        Value="Send Message"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/SendImage.aspx" Text="Send Image" 
+                        Value="Send Image"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/SendAudioVideo.aspx" Text="Send Audio/Video" 
+                        Value="Send Audio/Video"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/Inbox.aspx" Text="Receive Message" 
+                    Value="Receive Message"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/HomePage.aspx" Text="Logout" Value="Logout">
+                </asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle HorizontalPadding="100px" />
+        </asp:Menu>
+    
+    </td></tr>
+    
+    </table>
+    <%-- <hr style =" width :100%; "  />--%>
+  </div>
+  <!-- end header -->
+  <!-- start page -->
+  
+  <div id="page">
+ 
+  <div id="page-bgtop">
+   <div id="page-bgbtm">
+   <table width ="80%" align="center"  border="0" >
+  <%--<tr><td> <div id="sidebar1" class="sidebar" style ="height :auto  ;">
+   <marquee direction ="up" >
+   <img  src="Img/5.jpg" width ="150" height ="150" />
+   <br />
+    <img  src="Img/8.jpg" width ="150" height ="150" />
+    <br />
+     <img  src="Img/10.jpg" width ="150" height ="150" />
+     <br />
+      <img  src="Img/3.jpg" width ="150" height ="150" />
+      <br />
+       <img  src="Img/7.jpg" width ="150" height ="150" />
+       <br />
+        <img  src="Img/1.jpg" width ="150" height ="150" />
+   </marquee>
+    </div>
+    </td>
+    --%>
+    <!-- start content -->
+<tr><td> <div id="content">
+      <div style ="width :150%" >
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+      
+    </div>
+    </td></tr>
+    </table>
+    <!-- end content -->
+    <!-- start sidebars -->
+    
+    <!-- end sidebars -->
+    <div style="clear: both;">&nbsp;</div>
+  </div>
+  <!-- end page -->
+</div>
+
+</div>
+
+</div>
+<div id="footer-wrapper">
+  <div id="footer">
+    <p class="copyright">&nbsp;</p>
+  </div>
+</div>
+</form>
+</body>
+</html>
